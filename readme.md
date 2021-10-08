@@ -1,0 +1,1 @@
+[![Build Status](https://app.travis-ci.com/Pururu96/pizza_cart_with_expressjs.svg?branch=main)](https://app.travis-ci.com/Pururu96/pizza_cart_with_expressjs)
