@@ -1,16 +1,27 @@
 {
-  "name": "word-widget-101",
+  "name": "pizza_cart_with_expressjs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.3"
-  }
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pururu96/pizza_cart_with_expressjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pururu96/pizza_cart_with_expressjs/issues"
+  },
+  "homepage": "https://github.com/Pururu96/pizza_cart_with_expressjs#readme",
+  "description": ""
 }
