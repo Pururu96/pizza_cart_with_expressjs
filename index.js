@@ -24,23 +24,41 @@ app.use(bodyParser.json())
 
 app.use(express.static('public'))
 
-var counter = 0;
-
 app.get('/', function (req, res) {
-    res.render('index', {
-        cost: pizzaCart.cost(),
-        quantity: pizzaCart.quantity()
-    })
-}
-    , app.post('/pizzacart', function (req, res) {
-        pizzaCart.cost(req.body);
-        res.redirect('/')
-    })
 
-    , app.post('/count', function (req, res) {
-        counter++;
-        res.redirect('/')
-    }));
+
+    res.render('index', {
+        counter: pizzaCart.counter(),
+        totals: pizzaCart.totals()
+    })
+    // counter: pizzaCart.counter(),
+    // quantity: pizzaCart.quantity(),
+    // buttonClick: pizzaCart.buttonClick()
+    // hiddenButton
+})
+
+app.post('/pizzacart', function (req, res) {
+    pizzaCart.buttonClick(req.body.small)
+    pizzaCart.buttonClick(req.body.subBtn1)
+
+    pizzaCart.buttonClick(req.body.medium)
+    pizzaCart.buttonClick(req.body.subBtn2)
+
+    pizzaCart.buttonClick(req.body.large)
+    pizzaCart.buttonClick(req.body.subBtn3)
+
+    console.log(req.body.small)
+    res.redirect('/')
+
+})
+
+app.post('/order', function(req, res){
+    pizzaCart.buttonClick(req.body.small)
+    pizzaCart.buttonClick(req.body.medium)
+    pizzaCart.buttonClick(req.body.large)
+
+    res.redirect('/')
+})
 
 const PORT = process.env.PORT || 3009;
 

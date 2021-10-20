@@ -17,7 +17,6 @@
         }
 
         .btn2 {
-
             display: inline-block;
             height: 38px;
             padding: 0 30px;
@@ -33,8 +32,6 @@
             border: 1px solid #bbb;
             cursor: pointer;
             box-sizing: border-box;
-
-
             /*box-sizing: border-box;
             border-radius: 2px;
             cursor: pointer;*/
@@ -120,145 +117,6 @@
     </style>
 </head>
 
-<body>
-
-    {{!-- {{{body}}} --}}
-    <h1 class="center">Perfect Pizza</h1>
-
-    <div class="container">
-        <div class="shopping_cart box_model">
-            <h2 class="center">Shopping Cart</h2>
-            <form action="/pizzacart" method="POST">
-                <table class='center'>
-                    <tr>
-                        <td>Small Pizza</td>
-                        <td><button class="btn1 addBtn1" name='small' value='small' type="submit"><i class="fas fa-plus-circle"></i></button></td>
-                        <td><span class="smallQty">{{buttonClick.smallPizzaQty}}</span></td>
-                        <td><button class="btn1 subBtn1" type="submit" value="small"><i class="fas fa-minus-circle"></i></button></td>
-                        <td><span>R<span class="totalSmallPizza">{{cost.smallCost}}</span> </span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Medium Pizza</td>
-                        <td><button class="btn1 addBtn2" type="submit"><i class="fas fa-plus-circle"></i></button></td>
-                        <td><span class="mediumQty">{{medPizzaQty}}</span></td>
-                        <td><button class="btn1 subBtn2" type="submit"><i class="fas fa-minus-circle"></i></button></td>
-                        <td><span>R<span class="totalMediumPizza">{{cost.medCost}}</span> </span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Large Pizza</td>
-                        <td><button class="btn1 addBtn3" type="submit"><i class="fas fa-plus-circle"></i></button></td>
-                        <td><span class="largeQty">{{largePizzaQty}}</span></td>
-                        <td><button class="btn1 subBtn3" type="submit"><i class="fas fa-minus-circle"></i></button></td>
-                        <td><span>R<span class="totalLargePizza">{{cost.largeCost}}</span> </span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Total Cost:</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><span>R<span class="cartTotal">{{cost.totalCart}}</span> </span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5"><button class="btn2 checkout hidden" type="submit">Checkout</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="hidden message center">Message goes here</td>
-                    </tr>
-                </table>
-
-            </form>
-        </div>
-
-        <div class="payOut">
-            <form action="/pay" method="POST">
-                <table class="hidden payAmount center">
-                    <tr>
-                        <td>Payment Amount: <input type="number" class="paymentAmount" value="{{paymentAmount}}"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button class="paymentAmount" type="submit">Pay</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-    </div>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-4 center small_pizza box_model">
-                <h2>Small Pizza</h2>
-                <img src="pizzavector.png" width="150">
-
-                <h3>R<span class="smallPizzaPrice">49.00</span> </h3>
-                <div>
-                    Small Pizza with 3 toppings. 1 meat topping. 3 or less other toppings.
-                </div>
-                <br> <br>
-                <div>
-                    <button class="btn2 orderBtnSmall">Buy</button>
-                </div>
-                <br>
-            </div>
-
-            <div class="col-4 center medium_pizza box_model">
-                <h2>Medium Pizza</h2>
-                <img src="pizzavector.png" width="150">
-
-                <h3>R<span class="mediumPizzaPrice">89.00</span> </h3>
-                <div>
-                    Medium Margeritha Pizza with 3 toppings max. 2 or less meat toppings. 3 or less other toppings.
-
-                </div>
-
-                <br>
-                <div>
-                    <button class="btn2 orderBtnMedium">Buy</button>
-                </div>
-                <br>
-            </div>
-
-            <div class="col-4 center large_pizza box_model">
-                <h2>Large Pizza</h2>
-                <img src="pizzavector.png" width="150">
-
-                <h3>R<span class="largePizzaPrice">129.00</span> </h3>
-
-                <div>
-                    Large Margeritha Pizza with 3 toppings max. 3 meat toppings max. 3 or less other toppings.
-                </div>
-                <br>
-                <div>
-                    <button class="btn2 orderBtnLarge">Buy</button>
-                </div>
-                <br>
-            </div>
-        </div>
-    </div>
-
-    <div class="container col-12 contact_details box_model">
-        <h2 class="center">Contact Details</h2>
-        <div class="contacts marginleft">
-
-            <i class="fas fa-phone"></i>: 012 798 5648 <br>
-            <i class="far fa-envelope-open"></i>: info@perfectpizza.co.za <br>
-            <i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i>: @perfectpizza
-
-        </div>
-
-        <div class="location marginright">
-            Pizza Plaza <br>
-            Dough Road <br>
-            Base Town
-        </div>
-
-    </div>
-
-</body>
+{{{body}}}
 
 </html>
