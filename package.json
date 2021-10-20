@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "npm start"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
