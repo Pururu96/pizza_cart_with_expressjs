@@ -8,6 +8,8 @@ module.exports = function PizzaCart() {
     var largePizzaQty = 0;
     // var totalCart = 0;
 
+    var hidden = "hidden";
+
     let actionList = [];
 
     function counter() {
@@ -90,15 +92,17 @@ module.exports = function PizzaCart() {
         let medCost = (getTotal('medium')+getTotal('subBtn2')).toFixed(2);
         let largeCost = (getTotal('large')+getTotal('subBtn3')).toFixed(2);
 
-        if(smallCost < 0) {
-            smallPizza = 0.00;
-        }
-        if(medCost < 0) {
-            midPizza = 0.00;
-        }
-        if(largeCost < 0) {
-            largePizza = 0.00;
-        }
+        // if(smallCost < 0) {
+        //     smallPizza = 0.00;
+        // }
+        // if(medCost < 0) {
+        //     medPizza = 0.00;
+        // }
+        // if(largeCost < 0) {
+        //     largePizza = 0.00;
+        // }
+
+
 
         return {
             smallCost,
@@ -107,6 +111,15 @@ module.exports = function PizzaCart() {
             grandTotal : grandTotal()
         }
       
+    }
+
+    function checkoutBtn(){
+            hidden = "hidden"
+            if (grandTotal > 0 ){
+                hidden = "none";
+            } else {
+                hidden = "hidden";
+            }
     }
 
     // function quantity() {
@@ -141,8 +154,7 @@ module.exports = function PizzaCart() {
         buttonClick,
         getTotal,
         grandTotal,
-        totals   
+        totals,
+        checkoutBtn   
     }
-
-
 }

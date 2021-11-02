@@ -1,10 +1,14 @@
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var PizzaCart = require('./PizzaCartFF')
 var express = require('express')
 var app = express();
 var pizzaCart = PizzaCart();
+
+// Use the session middleware
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
 // set up view engine
 app.engine('handlebars', exphbs({
@@ -37,6 +41,10 @@ app.get('/', function (req, res) {
     // hiddenButton
 })
 
+app.get('/orders', function(req, res){
+    res.render('orders')
+})
+
 app.post('/pizzacart', function (req, res) {
     pizzaCart.buttonClick(req.body.small)
     pizzaCart.buttonClick(req.body.subBtn1)
@@ -46,6 +54,8 @@ app.post('/pizzacart', function (req, res) {
 
     pizzaCart.buttonClick(req.body.large)
     pizzaCart.buttonClick(req.body.subBtn3)
+
+    req.body.checkoutBtn
 
     console.log(req.body.small)
     res.redirect('/')
@@ -58,6 +68,10 @@ app.post('/order', function(req, res){
     pizzaCart.buttonClick(req.body.large)
 
     res.redirect('/')
+})
+
+app.post('/payment', function(req, res){
+    
 })
 
 const PORT = process.env.PORT || 3009;

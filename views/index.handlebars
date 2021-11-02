@@ -39,7 +39,9 @@
                         <td><span>R<span class="cartTotal">{{totals.grandTotal}}</span> </span></td>
                     </tr>
                     <tr>
-                        <td colspan="5"><button class="btn2 checkout hidden" type="submit">Checkout</button></td>
+                        <td colspan="5"> 
+                            <a href="/orders">Place Order</a>
+                            <button href="http://localhost:3009/orders" class="btn2 checkout" name="checkoutBtn" type="submit">Order</button></td>
                     </tr>
                     <tr>
                         <td colspan="5" class="hidden message center">Message goes here</td>
@@ -51,7 +53,7 @@
 
     
             <div class="payOut">
-                <form action="/pay" method="POST">
+                <form action="/payment" method="POST">
                     <table class="hidden payAmount center">
                         <tr>
                             <td>Payment Amount: <input type="number" class="paymentAmount" value="{{paymentAmount}}">
