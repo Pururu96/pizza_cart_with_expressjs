@@ -7,7 +7,7 @@ module.exports = function PizzaCart() {
     var mediumPizzaQty = 0;
     var largePizzaQty = 0;
 
-    var hidden = "hidden";
+    // var hidden = "hidden";
 
     let actionList = [];
 
@@ -144,9 +144,6 @@ module.exports = function PizzaCart() {
     //     }
     // }
 
-    // function change(amount) {
-    //     return (amount - totalCart).toFixed(2);
-    // }
 
     return {
         counter,
