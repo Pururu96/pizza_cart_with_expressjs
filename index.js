@@ -2,7 +2,7 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
-var PizzaCart = require('./PizzaCartFF')
+var PizzaCart = require('./pizzaCartFF')
 var express = require('express')
 var app = express();
 var pizzaCart = PizzaCart();
