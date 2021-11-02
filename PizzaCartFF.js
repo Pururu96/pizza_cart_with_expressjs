@@ -6,7 +6,6 @@ module.exports = function PizzaCart() {
     var smallPizzaQty = 0;
     var mediumPizzaQty = 0;
     var largePizzaQty = 0;
-    // var totalCart = 0;
 
     var hidden = "hidden";
 
